@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Achare</string>
+    <string name="home">خانه</string>
+    <string name="order">ثبت سفارش</string>
+    <string name="my_order">سفارش های من</string>
+    <string name="club">کلوپ آچاره</string>
+    <string name="profile">پروفایل کاربری</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="@dimen/_7sdp"
+    android:clipToPadding="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/Row"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:background="@drawable/shape_white"
+        android:elevation="5dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imgOrder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="@dimen/_7sdp"
+            android:src="@color/grey_5"/>
+
+        <views.NumTextView
+            android:id="@+id/txtOrder"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/shape_white_trans1"
+            android:gravity="center_vertical|right"
+            android:textColor="@color/grey_60"
+            android:textSize="@dimen/_12sdp"
+            android:paddingRight="@dimen/_6sdp"
+            android:text="نظافت منزل"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,177 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="fragments.Order">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp">
+
+        <LinearLayout
+            android:id="@+id/btnChooseCity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/_16sdp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_alignParentLeft="true">
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/ic_arrow"
+                android:background="@drawable/circle"
+                android:padding="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:rotation="90"/>
+
+            <views.NumTextView
+                android:id="@+id/txtChoosedCity"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center_vertical|left"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:text="تهران"/>
+
+            <views.NumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/grey_40"
+                android:gravity="center_vertical|left"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:text="شهر محل سکونت"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_margin="@dimen/_12sdp"
+        android:layout_below="@id/toolbar"
+        android:elevation="@dimen/_4sdp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|right"
+        android:background="@drawable/shape_white">
+
+        <views.MyEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorTransparent"
+            android:gravity="center_vertical|right"
+            android:textSize="@dimen/_12sdp"
+            android:textColorHint="@color/grey_40"
+            android:hint="به دنبال چه خدماتی هستید؟"/>
+
+        <ImageView
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_search"
+            android:padding="@dimen/_15sdp"/>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchBar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <views.NumTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:text="نظافت و پذیرایی"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recy1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="vertical">
+
+                <views.NumTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:text="شستشو"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recy2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/all_services_layout"/>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/Loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/grey_3">
+
+        <ProgressBar
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_3sdp"
+        android:background="@drawable/toolbar_shadow"
+        android:layout_below="@id/toolbar"/>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/clCity"
+        android:visibility="invisible"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        tools:context="com.androidsample.BottomSheetActivity">
+
+        <include layout="@layout/bottom_sheet_city" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>

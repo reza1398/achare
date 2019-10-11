@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <views.NumTextViewBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|right"
+        android:paddingRight="@dimen/_16sdp"
+        android:textSize="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:textColor="@color/grey_700"
+        android:text="همه خدمات"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyAllServices"
+        android:scrollbars="none"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
