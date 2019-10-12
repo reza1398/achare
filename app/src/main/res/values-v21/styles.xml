@@ -8,4 +8,14 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:navigationBarColor">@color/colorPrimary</item>
     </style>
+
+    <style name="styleRipplePrimary1"
+        parent="ThemeOverlay.AppCompat">
+        <item name="colorAccent">@color/colorAccent2</item>
+    </style>
+
+    <style name="styleRipplePrimary" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorControlHighlight">@color/colorAccent2</item>
+    </style>
+
 </resources>

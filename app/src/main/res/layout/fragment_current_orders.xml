@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fragments.CurrentOrders">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/CurrentOrders"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <views.NumTextViewBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red_400"
+        android:textSize="@dimen/_14sdp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="شما سفارش جاری ندارید!"/>
+
+</RelativeLayout>

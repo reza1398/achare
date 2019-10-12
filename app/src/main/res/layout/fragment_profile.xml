@@ -1,14 +1,239 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey_5"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="fragments.Profile">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:background="@color/colorPrimaryDark"/>
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_below="@id/view"
+        android:scrollbars="none">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_50sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:orientation="horizontal"
+                android:theme="@style/styleRipplePrimary"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center_vertical|right">
+
+                <views.NumTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/grey_60"
+                    android:text="حساب کاربری"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_15sdp"
+                    android:src="@drawable/ic_profile"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_marginRight="@dimen/_45sdp"
+                android:background="@color/grey_10"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:theme="@style/styleRipplePrimary"
+                android:background="?attr/selectableItemBackgroundBorderless">
+
+                <views.NumTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/grey_60"
+                    android:layout_toLeftOf="@id/i"
+                    android:text="اعتبار و پرداخت"/>
+
+                <ImageView
+                    android:id="@+id/i"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_15sdp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_payment"/>
+
+                <views.NumTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:paddingLeft="@dimen/_16sdp"
+                    android:gravity="center_vertical|left"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/_13sdp"
+                    android:text="0 تومان"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_marginRight="@dimen/_45sdp"
+                android:background="@color/grey_10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:orientation="horizontal"
+                android:theme="@style/styleRipplePrimary"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center_vertical|right">
+
+                <views.NumTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/grey_60"
+                    android:text="متخصصین منتخب"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_15sdp"
+                    android:src="@drawable/ic_favorites"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_marginRight="@dimen/_45sdp"
+                android:background="@color/grey_10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:orientation="horizontal"
+                android:theme="@style/styleRipplePrimary"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center_vertical|right">
+
+                <views.NumTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/grey_60"
+                    android:text="معرفی به دوستان"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_15sdp"
+                    android:src="@drawable/ic_referal"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_marginRight="@dimen/_45sdp"
+                android:background="@color/grey_10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:orientation="horizontal"
+                android:theme="@style/styleRipplePrimary"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center_vertical|right">
+
+                <views.NumTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/grey_60"
+                    android:text="پشتیبانی"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_15sdp"
+                    android:src="@drawable/ic_support"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_marginRight="@dimen/_45sdp"
+                android:background="@color/grey_10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:orientation="horizontal"
+                android:theme="@style/styleRipplePrimary"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center_vertical|right">
+
+                <views.NumTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/grey_60"
+                    android:text="قوانین و شایط استفاده"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_15sdp"
+                    android:src="@drawable/ic_rules"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_marginRight="@dimen/_45sdp"
+                android:background="@color/grey_10"/>
+
+            <views.NumTextView_Light
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:gravity="center_vertical|left"
+                android:paddingLeft="@dimen/_16sdp"
+                android:textSize="@dimen/_12sdp"
+                android:text="نسخه 1.0.0"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/_93sdp"
+        android:layout_height="@dimen/_93sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_35sdp"
+        android:src="@color/grey_20"
+        app:civ_border_color="@color/grey_5"
+        app:civ_border_width="@dimen/_5sdp"/>
+
+</RelativeLayout>

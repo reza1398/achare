@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -39,8 +40,10 @@ import static android.content.Context.CLIPBOARD_SERVICE;
 public class Info {
 
     Context context;
+    Typeface myFont;
     public Info(Context context){
         this.context = context;
+        myFont = Typeface.createFromAsset(context.getAssets(), "font/IRANYekanMobileRegular.ttf");
     }
 
 
@@ -141,9 +144,11 @@ public class Info {
     }
 
 
-    public void activeTabQuran(TextView txt1, TextView txt2){
-        txt1.setTextColor(context.getResources().getColor(R.color.colorPrimary));
+    public void activeTab(TextView txt1, TextView txt2){
+        txt1.setTextColor(context.getResources().getColor(R.color.colorPrimaryDark));
         txt2.setTextColor(context.getResources().getColor(R.color.grey_40));
+        txt1.setTypeface(myFont, Typeface.BOLD);
+        txt2.setTypeface(myFont, Typeface.NORMAL);
     }
 
 

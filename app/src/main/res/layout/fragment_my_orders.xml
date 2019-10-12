@@ -1,14 +1,58 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context="fragments.MyOrders">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <views.NumTextViewBold
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="@dimen/_45sdp"
+        android:gravity="center_vertical|right"
+        android:paddingRight="@dimen/_16sdp"
+        android:textSize="@dimen/_13sdp"
+        android:textColor="@color/grey_60"
+        android:text="لیست سفارشات"/>
 
-</FrameLayout>
+    <LinearLayout
+        android:id="@+id/viewPagerTab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:orientation="horizontal">
+
+        <views.NumTextView
+            android:id="@+id/btnPastOrders"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/grey_40"
+            android:background="?attr/selectableItemBackground"
+            android:text="گذشته"/>
+
+        <views.NumTextViewBold
+            android:id="@+id/btnCurrentOrders"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="?attr/selectableItemBackground"
+            android:text="جاری"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/grey_10"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
